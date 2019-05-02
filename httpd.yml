@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: "installing httpd"
+    yum:
+      name: httpd
+      state: present
+  - name: "Ensure the service is stopped"
+    service:
+      name: httpd
+      state: stopped
+  - name: "Ensure the service is start"
+    service:
+      name: httpd
+      state: restarted
+
