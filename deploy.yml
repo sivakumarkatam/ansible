@@ -8,3 +8,8 @@
         dest: /var/www/html
         update: yes
         version: master
+    - name: "Ensure the service is start"
+      service:
+        name: httpd
+        state: restarted
+
