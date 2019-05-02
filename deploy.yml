@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: pull from git
+      git:
+        repo: https://github.com/sivakumarkatam/hello.git
+        dest: /var/www/html
+        update: yes
+        version: master
