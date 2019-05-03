@@ -1,2 +1,2 @@
-ec2-user@34.204.206.241
+ec2-user@18.205.56.57
 127.0.0.1 ansible_connection=local

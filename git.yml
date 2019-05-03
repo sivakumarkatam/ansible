@@ -2,15 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-  - yum: 
-      name: git
-      state: present
   - yum:
-      name: maven
-      state: present
-  - yum:
-      name: java
-      state: present
-  - yum:
-      name: httpd
-      state: present
+      name: "{{ packages }}"
+  vars:
+    packages: 
+    - git
+    - maven
+    - java
+    - httpd
